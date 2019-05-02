@@ -20,7 +20,7 @@ import { ComponentData } from './type'
 // )
 
 export function subscribeToComponentUpdate(cb: (data: ComponentData) => void) {
-  function messageListener(evt) {
+  function messageListener(evt: any) {
     // change this to data once we're all set
     const message = evt.data
     if (message == null || message.type !== 'ce') return
