@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './styles.css'
 import StoryBlock from './Storyblock'
 import StateContext, { StateContextProvider } from './StateContext'
+import { subscribeToHighlight } from './messageListener'
 
 const initialComponentData = {
   header: {
@@ -36,6 +37,9 @@ const initialComponentData = {
 }
 
 function App() {
+  React.useEffect(() => {
+    subscribeToHighlight()
+  }, [])
   return (
     <StateContextProvider initialState={initialComponentData}>
       <StateContext.Consumer>

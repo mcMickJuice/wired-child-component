@@ -6,7 +6,11 @@ interface Props {
 }
 
 const Header = ({ header }: Props) => {
-  return <h1 className="storyblock-header">{header}</h1>
+  return (
+    <h1 className="storyblock-header" data-highlightid="global-header">
+      {header}
+    </h1>
+  )
 }
 
 export default Header
