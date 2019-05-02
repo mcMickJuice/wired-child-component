@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storyblock-header {
+  text-align: center;
+}
+
+.component {
+  margin: auto;
+  width: 980px;
+}
+
+.section {
+  /* height: 150px;
+  width: 150px; */
+  /* border: 1px dotted blue; */
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.shader {
+  background-color: blue;
+  opacity: 0.2;
+  position: fixed;
+  pointer-events: none;
+}
+
+.section-image {
+  display: block;
+}
+
+.section-headline {
+  margin-top: 8px;
+  width: 50%;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.section-subhead {
+  font-size: 14px;
+  text-align: center;
+}

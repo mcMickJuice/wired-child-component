@@ -1,0 +1,12 @@
+import React from 'react'
+
+interface Props {
+  id: string
+  header: string
+}
+
+const Header = ({ header }: Props) => {
+  return <h1 className="storyblock-header">{header}</h1>
+}
+
+export default Header
