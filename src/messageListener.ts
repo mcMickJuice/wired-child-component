@@ -82,3 +82,14 @@ export function subscribeToComponentUpdate(cb: (data: ComponentData) => void) {
 		window.removeEventListener('message', messageListener)
 	}
 }
+
+export function sendReadyToParent(message: string) {
+  console.log("ready to parent", message);
+  window.parent.postMessage(
+    {
+      type: "confirmation",
+      message
+    },
+    "*"
+  );
+}
