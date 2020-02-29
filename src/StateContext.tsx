@@ -1,6 +1,9 @@
 import React from 'react'
 import { ComponentData } from './type'
-import { subscribeToComponentUpdate } from './messageListener'
+import { 
+  subscribeToComponentUpdate,
+       sendReadyToParent} 
+from './messageListener'
 
 interface Props {
   initialState: ComponentData
@@ -25,6 +28,7 @@ export const StateContextProvider = ({ initialState, children }: Props) => {
       setComponentData(data)
     })
 
+    sendReadyToParent("State Context has mounted");
     return unsub
   }, [])
 
